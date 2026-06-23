@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIG TIME HUSH - About</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Pliant:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        #contact-form{
+            font-family: 'Pliant';
+            display: block;
+            margin: 0 auto;
+            padding: 15px;
+            max-width: 600px;
+        }
+        form#contact{
+            text-align: left;
+        }
+        label, input{
+            margin: 5px;
+            padding: 5px;
+        }
+        textarea{
+            width: 30vw;
+            height: 40vh;
+            padding: 15px;
+            margin: 5px;
+        }
+        div#thanks{
+            display: none;
+            font-family: 'Pliant';
+            text-align: center;
+            margin: 0 auto;
+            padding: 15px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+    <div class="banner" style="font-family: 'Notable'">CONTACT</div>
+    <div class="nav">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='about.html'>About</a></li>
+            <li><a href='contact.html'>Contact</a></li>
+            <li><a href='gallery.html'>Gallery</a></li>
+        </ul>
+    </div>
+    <div id="mobile-menu">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile nav">
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='about.html'>About</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+                <li><a href='gallery.html'>Gallery</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+<div id="contact-form">
+    <h2>Fill out the form below and we will get back to you ASAP!</h2>
+    <form id="contact">
+        <label for="name">Full name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="phone">Phone number:</label><br>
+        <input type="number" id="phone" name="phone"><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" placeholder="Message..."></textarea><br>
+        <input type="button" value="Submit" id="btn">
+    </form>
+</div>
+
+<div id="thanks">
+    <h2 id="tymessage">Thank you, </h2>
+    <p>We will be in touch shortly.</p>
+</div>
+
+<script>
+    window.onload = function(){
+        btn = document.getElementById("btn");
+        btn.onclick = function(){
+            person_name = document.getElementById("name").value;
+            thanks(person_name);
+        }
+    }
+    function thanks(a_name){
+        document.getElementById("contact-form").style.display = "none";
+        document.getElementById("tymessage").innerHTML += (" " + a_name + "!");
+        document.getElementById("thanks").style.display = "block";
+    }
+</script>
+
+</body>
+
+<footer>
+    <div id="footer-contact">
+        <p>Big Time Hush</p>
+        <p>109 S. Main St.</p>
+        <p>Boston MA</p>
+        <p>info@bigtimehush.com</p>
+        <p>617-222-0987</p>
+    </div>
+    <div id="Facebook"><a href="index.html"><img src="images/facebook.png" width="50px"></a></div>
+    <div id="IG"><a href="index.html"><img src="images/instagram.png" width="50px"></a></div>
+    <div id="Bluesky"><a href="index.html"><img src="images/bluesky.png" width="50px"></a></div>
+    <div id="YT"><a href="index.html"><img src="images/youtube.png" width="50px"></a></div>
+</footer>
+</html>
